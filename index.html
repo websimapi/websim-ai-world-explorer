@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>AI World Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://esm.sh/three",
+            "nipplejs": "https://esm.sh/nipplejs"
+        }
+    }
+    </script>
+</head>
+<body>
+    <canvas id="bg"></canvas>
+
+    <div id="ui-container">
+        <div id="info-box">
+            <h2 id="location-title">A Blank Canvas</h2>
+            <p id="location-description">Describe the world you want to explore. What will you create? The possibilities are endless.</p>
+        </div>
+        <form id="prompt-form">
+            <input type="text" id="prompt-input" placeholder="Go anywhere... (e.g., 'a serene underwater coral reef')" autocomplete="off">
+            <button type="submit">Travel</button>
+        </form>
+    </div>
+
+    <div id="joystick-container"></div>
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Generating your world...</p>
+    </div>
+
+    <div id="intro-modal">
+        <div class="modal-content">
+            <h1>Welcome to the AI World Explorer</h1>
+            <p>Describe any place, real or imagined, and step inside.</p>
+            <p><strong>Controls:</strong></p>
+            <ul>
+                <li><strong>Desktop:</strong> WASD to move, Mouse to look.</li>
+                <li><strong>Mobile:</strong> Joystick to move, Swipe to look.</li>
+            </ul>
+            <button id="start-btn">Begin Exploring</button>
+        </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
